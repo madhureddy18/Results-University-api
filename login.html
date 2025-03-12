@@ -1,0 +1,96 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ResultsUniversity</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://images.unsplash.com/photo-1531441672909-1dbcd7c9de6a') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .alert {
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f44336;
+            color: white;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login to ResultsUniversity</h1>
+        <div class="alert" id="alert">Invalid credentials</div>
+        <form method="POST" action="/login" id="login-form">
+            <label for="role">Role:</label>
+            <select name="role" id="role" required>
+                <option value="staff">Staff</option>
+                <option value="student">Student</option>
+            </select>
+            <br>
+            <label for="username">Username:</label>
+            <input type="text" name="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" required>
+            <br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
