@@ -1,2 +1,2 @@
 # Results-University-api
-I have created an api, that is about results of the students in  university where staff login and edit or update marks and students see their results by logging using their login credentials
+ResultsUniversityAPI is a Flask-based web application designed to manage student and staff data, including marks, subjects, and overall results. The application provides separate dashboards for students and staff, enabling staff to enter and update marks while allowing students to view their results. Built with Python, Flask, and PostgreSQL, the application leverages Flask-Login for secure authentication and SQLAlchemy for efficient database interactions.
